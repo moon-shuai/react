@@ -1,0 +1,62 @@
+@import '@/lib/reset.scss';
+* { touch-action: pan-y;}
+
+.main{
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include rect(100%,auto);
+  @include justify-content();
+  @include background-color(#fff);
+  .main-header{
+    @include rect(.5rem,.7rem);
+    background-image: url(http://m.shikuaigou.com/image/logo.png);
+    margin-top: .4rem;
+  }
+  .main-pass{
+    @include rect(90%,auto);
+    @include flexbox();
+    border-bottom: 1px solid #ff5000;
+    input{
+      border: none;
+    }
+    span{
+      margin-top: .4rem;
+      font-size: 30px;
+    }
+  }
+  .register{
+    @include rect(90%,0.4rem);
+    margin-top: .2rem;
+    @include flexbox();
+    @include justify-content(flex-end);
+  }
+  input,button{
+    @include rect(90%,0.4rem);
+    border: none;
+    margin-top: 0.4rem;
+  }
+  input{
+    border-bottom: 1px solid #ff5000;
+  }
+  button{
+    background: -webkit-linear-gradient(left,#ff9000,#ff5000) no-repeat;
+    box-shadow: 0 0.08rem 0.16rem #f7c7b1;
+    border-radius: .6rem;
+  }
+  .main-footer{
+    @include rect(90%,auto);
+    margin-top: .2rem;
+    @include flexbox();
+    @include justify-content(space-around);
+   span{
+     @include font-size(48px);
+     @include text-color(#1296db);
+     &:nth-child(2){
+       @include text-color(#1afa29);
+     }
+     &:nth-child(3){
+       @include text-color(#d81e06);
+     }
+   }
+  }
+}

@@ -1,0 +1,229 @@
+@import '@/lib/reset.scss';
+
+html, body, #root, .container{
+  @include rect(100%, 100%);
+}
+
+.am-modal-body {
+  height: 0;
+}
+.container {
+  @include flexbox();
+  @include flex-direction(column);
+
+  .box {
+    @include flex();
+    @include rect(100%, auto);
+    @include flexbox();
+    @include flex-direction(column);
+    .header {
+      @include rect(100%, 0.44rem);
+      @include background-color(#f66);
+    }
+    .content {
+      @include flex();
+      @include rect(100%, auto);
+      @include overflow();
+  // 主页的列表 样式 电影的介绍
+  .goooback {
+    @include rect(0.5rem,0.5rem);
+    @include background-color(#f66);
+    position: fixed;
+    right: 0;
+    bottom: 0.5rem;
+    z-index: 99999;
+  }
+      .proList {
+        .proItem {
+          @include rect(100%, 1rem);
+          @include flexbox();
+          @include border(0 0 1px 0, #eee, solid);
+          .itemImg {
+            @include rect(1rem, 100%);
+            img {
+              @include rect(0.9rem, 0.9rem);
+              @include border(1px, #f66, solid);
+              @include margin(0.05rem);
+            }
+          }
+          .itemInfo {
+            @include flex();
+            @include text-color(#333);
+          }
+        }
+
+
+      }
+    }
+  }
+  // 底部样式
+  .footer {
+    @include rect(100%, 0.5rem);
+    @include background-color(#eee);
+    ul{
+      @include rect(100%, 100%);
+      @include flexbox();
+      a {
+        @include flex();
+        @include flex-direction(column);
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        @include text-color(#000);
+        &.active {
+          @include text-color(#f66);
+        }
+      } 
+    } 
+  }
+}
+
+// .detail {
+//   .detailHeader {
+//     @include rect(100, 0.44rem);
+//     @include background-color(#337711);
+//     ul {
+//       @include flexbox();
+//       @include rect(100, 100%);
+//       li {
+//         @include flexbox();
+//         @include justify-content();
+//         @include align-items();
+
+//         span {
+//           @include font-size(0.16rem);
+
+//           &.iconfont {
+//             @include font-size(22px);
+//           }
+//         }
+//         &:nth-child(1) {
+//           @include rect (60px, 100%);
+//         }
+//         &:nth-child(2) {
+//           @include flex();
+//         }
+//         &:nth-child(3) {
+//           @include rect (60px, 100%);
+//         }
+//       }
+//     }
+//   }
+//   .detailcontent {
+//     @include rect (100%, auto);
+//     // @include flex();
+//     .detailimg {
+//       @include rect(100%, 3rem);
+//       @include flexbox();
+//       @include justify-content();
+//       @include align-items();
+//       @include background-color(#337711);
+//       img {
+//         @include rect(auto, 2.8rem);
+//       }
+//     }
+//     .detailPro {
+//       @include rect (100%, 1.5rem);
+//       @include flexbox();
+//       .detailProlist {
+//         h1 {
+//           @include font-size(0.24rem)
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.loadEffect{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+  margin-top:100px;
+}
+.loadEffect span{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: lightgreen;
+  position: absolute;
+  -webkit-animation: load 1.04s ease infinite;
+}
+@-webkit-keyframes load{
+  0%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0.2;
+  }
+}
+.loadEffect span:nth-child(1){
+  left: 0;
+  top: 50%;
+  margin-top:-8px;
+  -webkit-animation-delay:0.13s;
+}
+.loadEffect span:nth-child(2){
+  left: 14px;
+  top: 14px;
+  -webkit-animation-delay:0.26s;
+}
+.loadEffect span:nth-child(3){
+  left: 50%;
+  top: 0;
+  margin-left: -8px;
+  -webkit-animation-delay:0.39s;
+}
+.loadEffect span:nth-child(4){
+  top: 14px;
+  right:14px;
+  -webkit-animation-delay:0.52s;
+}
+.loadEffect span:nth-child(5){
+  right: 0;
+  top: 50%;
+  margin-top:-8px;
+  -webkit-animation-delay:0.65s;
+}
+.loadEffect span:nth-child(6){
+  right: 14px;
+  bottom:14px;
+  -webkit-animation-delay:0.78s;
+}
+.loadEffect span:nth-child(7){
+  bottom: 0;
+  left: 50%;
+  margin-left: -8px;
+  -webkit-animation-delay:0.91s;
+}
+.loadEffect span:nth-child(8){
+  bottom: 14px;
+  left: 14px;
+  -webkit-animation-delay:1.04s;
+}

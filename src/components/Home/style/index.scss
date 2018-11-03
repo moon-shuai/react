@@ -1,0 +1,120 @@
+@import '@/lib/reset.scss';
+
+
+.im {
+  @include rect(100%, 1.6rem);
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content(flex-end);
+  border-bottom: 0.1rem solid #F1F1F1;
+    // @include rect(100%, 1.6rem);
+    // display: block;
+    a {
+      &:nth-child(1) {
+        @include rect(40%, 1.5rem);
+        img {
+          @include rect(100%,100%);
+        }
+      }
+      &:nth-child(2) {
+        @include rect(60%, 0.8rem);
+        img {
+          @include rect(100%,100%);
+        }
+      }
+      &:nth-child(3) {
+        @include rect(30%, 0.7rem);
+        margin-top: -0.7rem;
+        img {
+          @include rect(100%,100%);
+        }
+      }
+      &:nth-child(4) {
+        @include rect(30%, 0.7rem);
+        margin-top: -0.7rem;
+        img {
+          @include rect(100%,100%);
+        }
+      }
+    }
+
+}
+
+.sc-iRbamj {
+  @include rect(100%, auto);
+  margin-bottom: 0.1rem;
+  .sc-jlyJG {
+    @include rect(100%, 100%);
+    @include flexbox();
+    .sc-gipzik {
+      @include flex();
+      @include rect(1.87rem, 100%);
+      img {
+        @include rect(100%, auto);
+
+      }
+    }
+  }
+}
+
+#gback{
+  background-color: #fff;
+  margin: 0 .1rem .2rem 0;
+  img{
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.smallimg {
+  @include rect(100%, 1.1rem);
+  margin-bottom: 0.1rem;
+  img {
+    @include rect(100%, 100%);
+  }
+}
+
+
+.allitem {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content();
+  @include rect(100%, auto);
+.liimg {
+  color: #000;
+  @include rect(96%, 1.5rem);
+  @include flexbox();
+  @include align-items();
+  @include justify-content(space-between);
+  @include background-color(#fff);
+  margin-bottom: 0.1rem;
+  img {
+    @include rect(34%, 1.1rem);
+  }
+  .liright {
+    @include flexbox();
+    @include flex-direction(column);
+    @include rect(62%, 100%);
+    @include justify-content();
+    p {
+      @include font-size(16px);
+      img{
+        @include rect(13px,auto);
+        @include margin(0 10px 0 0);
+      }
+    }
+    span {
+      @include text-color(#FB5413);
+      @include font-size(14px);
+      @include margin(0 0 5px 0);
+    }
+    .liright-ser {
+      @include text-color(#C7C4C4);
+    }
+    .liright-four {
+      @include text-color(#FB5413);
+      @include font-size(22px);
+    }
+  }
+}
+}

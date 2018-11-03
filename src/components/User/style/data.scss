@@ -1,0 +1,106 @@
+@import '@/lib/reset.scss';
+
+.data{
+  p{
+    font-size: 18px;
+    margin-right: .12rem;
+  }
+  @include rect(100%,auto);
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content();
+  .data-head{
+    background-color: #eee;
+    @include rect(100%,auto);
+    @include flexbox();
+    @include justify-content(space-between);
+    p{
+      font-size: 24px;
+      margin: .05rem .1rem .05rem .1rem;
+    }
+  }
+  .data-two{
+    background-color: #fff;
+    @include rect(100%,auto);
+    @include flex-wrap(wrap);
+    @include flexbox();
+    @include justify-content(flex-end);
+    .data-two-one{
+      @include rect(90%,.8rem);
+      border-bottom: 1px solid #efefef;
+      @include flexbox();
+      @include align-items();
+      img{
+        @include rect(60px,60px);
+        border-radius: 50%;
+      }
+    }
+    .data-two-two{
+      margin-left: .1rem;
+      h5{
+        font-size: 18px;
+      }
+      p{
+          color: #74777b;
+          font-size: 12px;
+      }
+      div{
+        margin:-.4rem 0 0 1.6rem;
+        font-size: 24px;
+      }
+    }
+    .data-ser{
+      @include flexbox();
+      @include justify-content(space-between);
+      @include rect(90%,.4rem);
+      line-height: .4rem;
+      @include font-size(20px);
+        span{
+          margin-right: .12rem;
+        }
+    }
+    #bord{
+      border-bottom: 1px solid #efefef;
+    }
+    .data-four{
+      @include rect(100%,.6rem);
+      border-bottom: .1rem solid #efefef;
+      border-top: .1rem solid #efefef;
+      line-height: .4rem;
+      @include flexbox();
+      @include justify-content(space-between);
+      p{
+        margin-left: .3rem;
+      }
+    }
+    #data-foot{
+      @include rect(100%,.5rem);
+      border-top: .1rem solid #efefef;
+      line-height: .4rem;
+      @include flexbox();
+      @include justify-content(space-between);
+      p{
+        margin-left: .3rem;
+      }
+    }
+    .data-foot{
+      @include rect(100%,.5rem);
+      border-bottom: .1rem solid #efefef;
+      line-height: .4rem;
+      @include flexbox();
+      @include justify-content(space-between);
+      p{
+        margin-left: .3rem;
+      }
+    }
+    .data-footer{
+      z-index: 99;
+      @include rect(100%,.8rem);
+      background: -webkit-linear-gradient(left,#ff9000,#ff5000) no-repeat;
+      text-align: center;
+      line-height: .8rem;
+      color: #fff;
+      font-size: 28px;
+    }
+  }
+}

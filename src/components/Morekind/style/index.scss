@@ -1,0 +1,97 @@
+@import '@/lib/reset.scss';
+
+.morekind {
+  @include rect(100%,100%);
+  overflow: auto;
+  .header {
+    @include background-color(#FC3757);
+    background-image: linear-gradient(90deg, #FA7C54 0%, #FD3F69 100%);
+    @include rect (100%,0.44rem);
+    font-size: 16px;
+    text-align: center;
+    line-height: 44px;
+    position: relative;
+    color: #fff;
+    .icon-jiantou {
+      position: absolute;
+      top:0;
+      left:0rem;
+      @include rect(0.5rem,100%);
+    }
+  }
+  .content {
+    @include background-color(#F1F1F1);
+    @include rect(100%,auto);
+    flex-wrap: wrap;
+    @include flexbox();
+    justify-content: space-between;
+    a {
+      @include rect(49.3%,auto);
+      @include background-color(#fff);
+      margin-bottom: 1.2%;
+      .cover-image {
+        width: 100%;
+        height: 1.85rem;
+        display: block;
+      }
+      .title {
+        @include rect(100, 0.4rem);
+        line-height: .2rem;
+        color: #333;
+        font-size: 14px;
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        margin: .06rem .1rem;
+        .tabsImg {
+          width: 13px;
+          margin-right: 3px;
+        }
+      }
+      .count {
+        color: #C7C4C4;
+        font-size: 12px;
+        margin: 0 .1rem;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+      }
+      .coupon {
+        padding: .08rem .1rem .05rem;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items();
+        .price {
+          color: #FC3D37;
+          display: inline-block;
+          b {
+            font-size: 22px;
+          }
+        }
+        .count-label{
+          background: url(http://oss3.lanlanlife.com/caf1f155b1a83e1467bfa9e726814b8e_46x140.png) no-repeat;
+          background-size: 70px 23px;
+          padding-left: 9px;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          width: 70px;
+          height: 23px;
+          color: #fff;
+          border-radius: 1px;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          strong {
+            font-size: 14px;
+            font-weight: bold;
+
+          }
+        }
+      }
+    }
+  }
+}

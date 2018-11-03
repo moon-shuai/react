@@ -1,0 +1,30 @@
+@import '@/lib/reset.scss';
+
+.search {
+  @include padding ( 0.07rem 0.14rem);
+  @include background-color(#FC3757);
+  background-image: linear-gradient(90deg, #FA7C54 0%, #FD3F69 100%);
+  @include rect(1005, 0.44rem);
+  form {
+    @include rect (100%, 100%);
+    @include font-size(0.12rem);
+    position: relative;
+    .placeholder {
+      position: absolute;
+      top:0;
+      left:40%;
+      color: #fff;
+      .iconfont {
+        @include font-size(0.12rem);
+        line-height: 0.3rem;
+      }
+    }
+  }
+  input{
+    @include rect(100%, 100%);
+    border: none;
+    border-radius: 0.1rem;
+    background-color: #fd98a0;
+  }
+  
+}

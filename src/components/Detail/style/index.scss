@@ -1,0 +1,234 @@
+@import '@/lib/reset.scss';
+
+.main {
+
+  @include rect(100%,100%);
+    position: relative;
+    .goBack{
+      @include rect(0.44rem,0.44rem);
+      position: fixed;
+      top: 10px;
+      left: 15px;
+      z-index: 9999;
+      background: #f66;
+      text-align: center;
+      line-height: 44px;
+      font-size: 20px;
+      opacity: 0.6;
+      border-radius: 50%;
+    }
+  // @include background-color(pink);
+    .banner {
+      @include rect(100%, 3.4rem);
+      .oneImg {
+        @include rect(100%, 100%);
+        display: block;
+      }
+    }
+  .detail {
+    @include rect(100%,auto);
+    @include background-color(#fff);
+    .detail-info {
+      @include padding(0.15rem);
+      position: relative;
+      .detail-title {
+        @include font-size(0.16rem);
+        color:#030303;
+        @include ellipsis();
+        .icon-tianmao2 {
+          color:red;
+          padding-right: 0.15rem;
+          font-size: 0.12rem;
+        }
+      }
+      .price {
+        position: relative;
+        height: 28px;
+        line-height: 28px;
+        padding-top: 12px;
+        font-size: .12rem;
+        .price-title {
+          color: #696969;
+          margin-right: 0.1rem;
+        }
+        .yPrice {
+          color: #FB610C;
+          font-size: .2rem;
+          margin-right: .1rem;
+          i {
+            font-size: 0.12rem;
+          }
+        }
+        .oPrice{
+          color: #696969;
+          text-decoration:line-through;
+        }
+        .monthSales{
+          float: right;
+        }
+      }
+    }
+    .heheh {
+    @include rect(100%, 0.1rem);
+    @include background-color(#f1f1f1); 
+    } 
+
+    .qianggou{
+      // @include padding(/0.15rem);
+      @include rect(100%, 0.48rem);
+      @include background-color(#fef1f8);
+      color: red;
+      font-size: 0.14rem;
+      padding-left: 0.15rem;
+      line-height: 0.48rem;
+      .icon-qg {
+        margin-right: 0.1rem;
+        font-size: 0.2rem;
+      }
+    }
+
+    .coupon {
+      @include padding(0.1rem 0.17rem);
+      @include rect (100%, 0.78rem);
+      background-image: url(//misc.360buyimg.com/user/quan/3.0.0/widget/quan-index/i/quan-bg.png);
+      background-repeat: repeat;
+      background-position: center 0.12rem;
+      background-size: auto 0.78rem;
+      @include flexbox();
+      .coupon-left {
+        @include rect(70%,100%);
+        background-color: #F1F1F1;
+        // color: #f1f1f1;
+        @include flexbox();
+        .coupon-amount {
+          font-size: 0.2rem;
+          color: #FB610C;
+          margin-right: 0.2rem;
+          b {
+            font-size: 0.4rem;
+          }
+        }
+        .coupon-time {
+          font-weight: 100;
+          margin-top: 0.1rem;
+          p {
+            color: #696969;
+            i{
+              color: #FB610C;
+            }
+          }
+        }
+      }
+
+      .go-coupon {
+        margin-left:0.3rem;
+        line-height: 0.6rem;
+        background: #fd4420;
+        color: #f1f1f1;
+      }
+    }
+
+    .recommend {
+      padding: 15px;
+      background-color: #FFF;
+      label {
+        position: absolute;
+        color: #030303;
+        font-size: 14px;
+        font-weight: 400;
+        font-style: normal;
+        font-variant: normal;
+      }
+      p {
+        padding-left: 60px;
+        line-height: 1.4;
+        color: #696969;
+      }
+    }
+    .grade {
+      padding: 15px;
+      background-color: #FFF;
+      img  {
+        height: 10px;
+        vertical-align: middle;
+      }
+      .name{
+        font-size: 0.14rem;
+        color: #030303;
+        margin-left: 0.1rem;
+        vertical-align: middle;
+      }
+      .dsr {
+        margin-top: 20px;
+        font-size: 0;
+        span {
+          display: inline-block;
+          text-align: center;
+          color: #696969;
+          font-size: 12px;
+          font-weight: 400;
+          font-style: normal;
+          margin-right: 0.35rem;
+        }
+        .up {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          background-position: center;
+          background-size: 10px 10px;
+          margin-left: 5px;
+          color: red;
+        }
+      }
+    }
+  }
+
+  .moreImg {
+    @include rect(100%,auto);
+    .twoImg {
+      @include rect(100%,auto);
+    }
+   }
+   .detailfooter {
+     @include flexbox();
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      bottom: 0;
+      @include rect(100%, 0.5rem);
+      background-color: #fff;
+      .shop_car_cout {
+        margin-top: 0.05rem;
+       @include rect(15%,100%);
+        text-align: center;
+        color:#94193f;
+        .icon-buy-car {
+          font-size: 0.3rem;
+        }
+      }
+      .inStock {
+        margin-top: 0.1rem;
+        margin-left:30%;
+        margin-right:5%;
+        @include flexbox();
+        @include rect(65%,100%);
+        .addCar {
+          @include rect(100%,0.35rem);
+          line-height: 33px;
+          text-align: center;
+          color: #94193f;
+          border: 1px solid #94193f;
+          font-size: 1.1em;
+        }
+        .buyBtn {
+          margin-left: 2%;
+          @include rect(100%,0.35rem);
+          line-height: 35px;
+          text-align: center;
+          color: #fff;
+          background-color: #94193f;
+          font-size: 1.1em;
+        }
+      }
+   }
+}

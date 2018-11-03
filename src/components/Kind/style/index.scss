@@ -1,0 +1,99 @@
+@import '@/lib/reset.scss';
+* { touch-action: pan-y;};
+
+.content {
+  @include rect(100%, 100%);
+  @include overflow();
+  .am-tabs-default-bar-left .am-tabs-default-bar-content, .am-tabs-default-bar-right .am-tabs-default-bar-content {
+    display: flex;
+    height: 48%;
+    flex-direction: column;
+}
+.am-tabs-default-bar-underline {
+  position: absolute;
+  border: 1px red solid;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.am-tabs-default-bar {
+  @include overflow();
+}
+
+// prolist组件样式
+  .right {
+    @include rect(94%, atuo);
+    @include margin(0 0 0 0.16rem);
+    .imgPic {
+      @include rect(94%, 1.03rem);
+      @include margin(0.22rem 0 0 0);
+      img {
+        @include rect(100%, 0.85rem);
+        @include border-radius(0.04rem 0.04rem);
+      }
+      
+    }
+    .clothesList {
+      @include rect(94%,auto);
+      h4 {
+        @include rect(94%, 0.30rem);
+        @include flexbox();
+        @include align-items();
+      }
+      ul {
+        @include rect(100%, 3rem);
+        @include background-color(#fff);
+        @include border-radius(0.12rem 0.12rem);
+        a {
+          @include rect(0.62rem, 0.62rem);
+          text-align: center;
+          @include margin(0.24rem 0.1rem 0.08rem);
+          float: left;
+          color:#000;
+          img {
+            @include rect(0.62rem, 0.62rem);
+            @include border-radius(50%);
+          }
+          p {
+            @include rect(0.62rem, 0.22rem);
+            @include margin(0.04rem 0 0 0);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space:nowrap;
+          }
+        }
+      }
+    }
+    // .clothesItems {
+    //   @include rect(94%, 5rem);
+    //   @include background-color(pink);
+      .h4-b {
+        @include rect(94%, 0.30rem);
+        @include flexbox();
+        @include align-items();
+      }
+      .ul-remen {
+        @include rect(94%, 5.6rem);
+        @include background-color(#fff);
+        @include border-radius(0.12rem 0.12rem);
+        li {
+          @include rect(0.62rem, 0.62rem);
+          text-align: center;
+          @include margin(0.24rem 0.1rem 0.06rem);
+          float: left;
+          img {
+            @include rect(0.62rem, 0.62rem);
+            @include border-radius(50%);
+          }
+          p {
+            @include rect(0.62rem, 0.22rem);
+            @include margin(0.04rem 0 0 0);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space:nowrap;
+          }
+        }
+      }
+    }  
+  // }
+}

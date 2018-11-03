@@ -1,0 +1,182 @@
+@import '@/lib/reset.scss';
+
+.searchinput {
+  @include rect(100%, 100%);
+  @include background-color(#fff);
+  overflow: auto;
+
+  .searchHeared {
+    @include rect(100%, 0.44rem);
+    @include flexbox();
+    @include background-color(#FC3757);
+    background-image: linear-gradient(90deg, #FA7C54 0%, #FD3F69 100%);
+    @include align-items();
+    
+    .goback{
+      @include rect(0.4rem,100%);
+      @include justify-content();
+      @include flexbox();
+      @include align-items();
+    }
+    .searchbox {
+      flex: 1;
+      .am-search {
+        @include background-color(#FC3757);
+        background-image: linear-gradient(90deg, #FA7C54 0%, #FD3F69 100%);
+        input {
+          background-color: #fd98a0;
+        }
+      }
+      
+    }
+    .btn {
+    @include rect(0.56rem,0.3rem);
+    line-height: 30px;
+    @include text-color(#FA7656);
+    @include background-color(#fff) ;
+    @include font-size(0.14rem);
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    margin-right: 0.1rem
+    }
+  }
+  .searchcontent {
+    display: none;
+    @include rect (100%, auto);
+    @include padding(0.2rem);
+    .searchtitle {
+      margin-bottom: 15px;
+      font-size: 14px;
+      color: #9a9a9a;
+      span {
+        color: red;
+      }
+    }
+    .searchlist {
+      .searchitem {
+        background: #f1f1f1;
+        border-radius: 2px;
+        padding: 6px 19px;
+        margin: 0 10px 10px 0;
+        color: #514F4F;
+        font-size: 12px;
+        display: inline-block;
+      }
+    }
+    .divide {
+      @include rect(100%,0.1rem);
+      @include background-color(#f1f1f1);
+    }
+    .his {
+      @include padding(0.2rem);
+      .subject {
+        @include margin(0 0 .15rem 0);
+        @include font-size(0.14rem);
+        @include text-color(#9a9a9a);
+        span{
+          float: right;
+        }
+      }
+      .hislist {
+        color: #514F4F;
+        font-size: 12px;
+        display: inline-block;
+      }
+    }
+  }
+  .searchresult {
+    // display: none;
+    .sort-tool{
+      margin: 0.1rem 0;
+      @include flexbox();
+      background: #FFF;
+      @include rect(100%,0.3rem);
+      @include align-items();
+      @include justify-content(center);
+      .s-box {
+        @include flex();
+        @include flexbox();
+        @include justify-content(center);
+      }
+      // .s-box:hover{
+      //   color: #FA7656;
+      // }
+      .active {
+        color: #FC3757;
+      }
+    }
+    .searchresult-list {
+      @include background-color(#F1F1F1);
+      @include rect(100%,auto);
+      flex-wrap: wrap;
+      @include flexbox();
+      justify-content: space-between;
+      a {
+        @include rect(49.3%,auto);
+        @include background-color(#fff);
+        margin-bottom: 1.2%;
+        .cover-image {
+          width: 100%;
+          height: 1.85rem;
+          display: block;
+        }
+        .title {
+          @include rect(100, 0.4rem);
+          line-height: .2rem;
+          color: #333;
+          font-size: 14px;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          margin: .06rem .1rem;
+          .tabsImg {
+            width: 13px;
+            margin-right: 3px;
+          }
+        }
+        .count {
+          color: #C7C4C4;
+          font-size: 12px;
+          margin: 0 .1rem;
+          @include flexbox();
+          @include justify-content(space-between);
+          @include align-items();
+        }
+        .coupon {
+          padding: .08rem .1rem .05rem;
+          @include flexbox();
+          @include justify-content(space-between);
+          @include align-items();
+          .price {
+            color: #FC3D37;
+            display: inline-block;
+            b {
+              font-size: 22px;
+            }
+          }
+          .count-label{
+            background: url(http://oss3.lanlanlife.com/caf1f155b1a83e1467bfa9e726814b8e_46x140.png) no-repeat;
+            background-size: 70px 23px;
+            padding-left: 9px;
+            box-sizing: border-box;
+            width: 70px;
+            height: 23px;
+            color: #fff;
+            border-radius: 1px;
+            display: flex;
+            align-items: center;
+            strong {
+              font-size: 14px;
+              font-weight: bold;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

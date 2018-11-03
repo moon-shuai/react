@@ -1,0 +1,102 @@
+@import '@/lib/reset.scss';
+
+
+.seckill {
+  .seckillBanner {
+    @include rect(100%, auto); 
+    .goBack{
+      @include rect(0.44rem,0.44rem);
+      position: fixed;
+      top: 10px;
+      left: 15px;
+      z-index: 9999;
+      background: #f66;
+      text-align: center;
+      line-height: 44px;
+      font-size: 20px;
+      opacity: 0.6;
+      border-radius: 50%;
+    }
+    img {
+      @include rect(100%, auto); 
+    }
+  }
+  .am-tabs {
+    .am-tabs-tab-bar-wrap {
+      @include background-color(#f66);
+    }
+    .listPro {
+      @include rect(100%,auto);
+      background-color: #fff;
+      .goods-a {
+        @include rect(100%,1.2rem);
+        background: #fff;
+        position: relative;
+        border-bottom: 1px solid #e7e7e7;
+        @include flexbox();
+        padding: 0.1rem 0.1rem;
+        .good-img {
+          @include rect(1rem,1rem);
+          margin-right: 0.1rem;
+          img {
+            @include rect(1rem,1rem);
+            display: block;
+            opacity: 1;
+            
+          }
+        }
+        .box_info {
+          .box_info_title {
+            font-weight: 400;
+            font-size:0.14rem;
+          }
+          .goods_price{
+            margin-top: 0.1rem;
+            color: #ff464e;
+            .tip,.m_icon,.goods_old_price {
+              font-size: 0.12rem;
+            }
+            .now_price {
+              font-size: 0.22rem;
+            }
+            .goods_old_price {
+              color:#c5c5c5;
+              text-decoration:line-through
+            }
+          }
+          .js-bar {
+            @include rect(1.6rem,auto);
+            border-radius: .59733rem;
+            background: #ffb1b4;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            .cover-bar {
+              background-color:#ff464e;
+              @include rect(22%,100%);
+              border-radius: .59733rem;
+              z-index: 555;
+              position: absolute;
+              left: 0;
+            }
+            .txt {
+              color: #fff;
+              z-index: 1;
+            }
+          }
+          .buy_btn {
+            position: absolute;
+            text-align: center;
+            @include background-color(#ff464e);
+            @include rect(0.7rem,0.3rem);
+            line-height: 0.3rem;
+            right: 0.1rem;
+            bottom:0.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+

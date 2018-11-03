@@ -1,0 +1,165 @@
+@import '@/lib/reset.scss';
+
+.user{
+  @include rect(100%,100%);
+  .header{
+    @include rect(100%,30%);
+    @include flexbox();
+    @include flex-wrap(wrap);
+    background: -webkit-linear-gradient(left,#ff9000,#ff5000) no-repeat;
+    color: #fff;
+    .head-head{
+      @include rect(68%,0.4rem);
+      margin:.1rem 0 0 .2rem;
+      font-size: 24px;
+      img{
+        width: 41.813px;
+        height: 41.813px;
+        border-radius: 21.333px;
+        margin-right: .1rem;
+        margin-top: .1rem;
+      }
+     #head-img{
+        width: 124px;
+        height: 18px;
+       margin:-.4rem 0 0 .5rem;
+    }
+     p{
+        font-size: 12px;
+        margin:-.1rem 0 0 .5rem;
+      }
+    }
+    .head-right{
+      margin:.3rem .2rem 0 0;
+      a,span{
+        margin-right: .1rem;
+        font-size: 18px;
+        color: #fff;
+      }
+     }
+    .head-foot{
+      @include rect(90%,auto);
+      @include flexbox();
+      div{
+        margin-left: 0.4rem;
+        text-align: center;
+      }
+    }
+  }
+  .main {
+    @include rect(100%, 32%);
+    background-color: rgb(242, 242, 242);
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content();
+    .main-head {
+      @include rect(90%, .4rem);
+      background-color: rgb(255, 255, 255);
+      border-radius: 10.24px;
+      margin: -.1rem 0 .1rem 0;
+      div {
+        margin-top: .05rem;
+        margin-left: .2rem;
+        font-size: 12px;
+        span {
+          &:nth-child(1) {
+            color: red;
+            margin-right: .2rem;
+          }
+        }
+      }
+    }
+    .main-main {
+      @include rect(90%, 1.6rem);
+      background-color: #fff;
+      border-radius: 10.24px;
+        .main-one {
+          @include flexbox();
+          @include justify-content(space-between);
+          border-bottom: 1px solid rgb(238, 238, 231);
+          @include rect(100%, .3rem);
+          p {
+            margin: .04rem .1rem 0 .1rem;
+            &:nth-child(2) {
+              color: rgb(153, 153, 153);
+            }
+        }
+      }
+      .li {
+        @include rect(100%, .6rem);
+        @include flexbox();
+        @include align-items();
+        @include justify-content(space-around);
+        text-align: center;
+        div{
+          img{
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+      .main-foot{
+        @include rect(90%,.6rem);
+        background-color: rgb(246, 246, 246);
+        margin:.02rem 0 0 5%;
+        border-radius: 10px;
+        .main-foot-one{
+          @include flexbox();
+          @include justify-content(space-between);
+        }
+        .main-foot-two{
+          @include flexbox();
+          font-size: 12px;
+          img{
+            @include rect(26px,26px);
+            border-radius: 4px;
+            margin-right: .1rem;
+          }
+          .img{
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+  .foot{
+    @include rect(100%,30%);
+    background-color: rgb(242, 242, 242);
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content();
+    border-radius: 16px;
+    .main-one {
+      background-color: #fff;
+      @include flexbox();
+      @include justify-content(space-between);
+      border-bottom: 1px solid rgb(238, 238, 231);
+      @include rect(90%, .3rem);
+      margin-top: .4rem;
+      p {
+        margin: .04rem .1rem 0 .1rem;
+        &:nth-child(2) {
+          color: rgb(153, 153, 153);
+        }
+      }
+    }
+    .li {
+      @include rect(90%, 1.2rem);
+      @include flexbox();
+      background-color: #fff;
+      @include flex-wrap(wrap);
+      @include justify-content(space-around);
+      text-align: center;
+      div{
+        margin-top: .05rem;
+        @include rect(25%,auto);
+        font-size: 12px;
+        img{
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}

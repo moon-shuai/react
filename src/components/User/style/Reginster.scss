@@ -1,0 +1,46 @@
+@import '@/lib/reset.scss';
+
+.reg {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include rect(100%, 100%);
+  @include justify-content();
+  @include background-color(#fff);
+  #back{
+    @include rect(90%,auto);
+    @include justify-content(flex-start);
+    span{
+      font-size: 30px;
+    }
+  }
+  .reg-header {
+    @include rect(.5rem, .7rem);
+    margin-top: -.8rem;
+    background-image: url(http://m.shikuaigou.com/image/logo.png);
+  }
+  input, button {
+    @include rect(90%, 0.4rem);
+    border: none;
+    margin-top: -0.6rem;
+  }
+  input {
+    border-bottom: 1px solid #ff5000;
+  }
+  button {
+    background: -webkit-linear-gradient(left, #ff9000, #ff5000) no-repeat;
+    box-shadow: 0 0.08rem 0.16rem #f7c7b1;
+    border-radius: .6rem;
+  }
+  .cation{
+    @include flexbox();
+    @include rect(90%,0.4rem);
+    @include justify-content(space-between);
+    input{
+      @include rect(56%,100%)
+    }
+    button{
+      @include rect(40%,100%);
+      border-radius: 0;
+    }
+  }
+}
