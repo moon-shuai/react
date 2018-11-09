@@ -36,7 +36,6 @@ const action = {
     }).catch(err => console.log(err))
   },
   getGuessLink: (dispatch) => {
-
     fetch('/beiBei//mroute.html?method=beibei.module.pintuan.recom.list.get&scene_id=app_item_detail_guess_you_like&event_id=106482675&iid=30707814&uid=0').then(res => res.json())
       .then(data => {
         dispatch({
